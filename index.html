@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chocolate Cake Recipe</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="recipe-card">
+            <!-- Recipe Header -->
+            <div class="recipe-header">
+                <h1 class="recipe-title">Chocolate Cake</h1>
+                <div class="recipe-meta">
+                    <span class="meta-item">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="12" r="10"></circle>
+                            <polyline points="12 6 12 12 16 14"></polyline>
+                        </svg>
+                        Prep: 30 mins
+                    </span>
+                    <span class="meta-item">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                            <circle cx="9" cy="7" r="4"></circle>
+                            <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                            <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                        </svg>
+                        Serves: 8
+                    </span>
+                </div>
+            </div>
+
+            <!-- Recipe Image -->
+            <div class="recipe-image">
+                <img src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?w=800&h=500&fit=crop" alt="Delicious Chocolate Cake">
+            </div>
+
+            <!-- Progress Bar -->
+            <div class="progress-container">
+                <div class="progress-bar" id="progressBar"></div>
+            </div>
+
+            <!-- Ingredients Section -->
+            <div class="recipe-section">
+                <button class="toggle-btn" id="ingredientsToggle">
+                    <span>Show Ingredients</span>
+                    <svg class="arrow" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <polyline points="6 9 12 15 18 9"></polyline>
+                    </svg>
+                </button>
+                <div class="section-content collapsed" id="ingredientsContent">
+                    <h2>Ingredients</h2>
+                    <ul class="ingredients-list">
+                        <li class="ingredient-item">2 cups all-purpose flour</li>
+                        <li class="ingredient-item">2 cups granulated sugar</li>
+                        <li class="ingredient-item">3/4 cup unsweetened cocoa powder</li>
+                        <li class="ingredient-item">2 teaspoons baking soda</li>
+                        <li class="ingredient-item">1 teaspoon baking powder</li>
+                        <li class="ingredient-item">1 teaspoon salt</li>
+                        <li class="ingredient-item">2 large eggs</li>
+                        <li class="ingredient-item">1 cup buttermilk</li>
+                        <li class="ingredient-item">1 cup strong black coffee (cooled)</li>
+                        <li class="ingredient-item">1/2 cup vegetable oil</li>
+                        <li class="ingredient-item">1 teaspoon vanilla extract</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Steps Section -->
+            <div class="recipe-section">
+                <button class="toggle-btn" id="stepsToggle">
+                    <span>Show Steps</span>
+                    <svg class="arrow" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <polyline points="6 9 12 15 18 9"></polyline>
+                    </svg>
+                </button>
+                <div class="section-content collapsed" id="stepsContent">
+                    <h2>Instructions</h2>
+                    <div class="steps-list">
+                        <div class="step-item" data-step="1">
+                            <div class="step-number">1</div>
+                            <p>Preheat your oven to 350°F (175°C). Grease and flour two 9-inch round cake pans.</p>
+                        </div>
+                        <div class="step-item" data-step="2">
+                            <div class="step-number">2</div>
+                            <p>In a large bowl, whisk together flour, sugar, cocoa powder, baking soda, baking powder, and salt.</p>
+                        </div>
+                        <div class="step-item" data-step="3">
+                            <div class="step-number">3</div>
+                            <p>Add eggs, buttermilk, coffee, oil, and vanilla. Beat with an electric mixer on medium speed for 2 minutes.</p>
+                        </div>
+                        <div class="step-item" data-step="4">
+                            <div class="step-number">4</div>
+                            <p>Pour batter evenly into prepared pans. The batter will be thin, but that's normal.</p>
+                        </div>
+                        <div class="step-item" data-step="5">
+                            <div class="step-number">5</div>
+                            <p>Bake for 30-35 minutes, or until a toothpick inserted in center comes out clean.</p>
+                        </div>
+                        <div class="step-item" data-step="6">
+                            <div class="step-number">6</div>
+                            <p>Cool in pans for 10 minutes, then remove to wire racks to cool completely before frosting.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Cooking Controls -->
+            <div class="cooking-controls">
+                <button class="btn btn-primary" id="startCookingBtn">Start Cooking</button>
+                <button class="btn btn-secondary hidden" id="nextStepBtn">Next Step</button>
+                <button class="btn btn-secondary hidden" id="resetBtn">Reset</button>
+            </div>
+
+            <!-- Timer (Bonus) -->
+            <div class="timer hidden" id="timer">
+                <h3>Cooking Timer</h3>
+                <div class="timer-display" id="timerDisplay">30:00</div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
